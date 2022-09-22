@@ -1,6 +1,5 @@
 /*
 Copyright 2012 Jun Wako <wakojun@gmail.com>
-Copyright 2015 Jack Humbert
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,26 +17,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
+#define VIAL_KEYBOARD_UID {0xFA, 0x24, 0x73, 0x28, 0x76, 0x27, 0xB9, 0xD7}
 
-#define DYNAMIC_KEYMAP_LAYER_COUNT 3
-/* key matrix size */
-// Rows are doubled-up
-#define MATRIX_ROWS 12
-#define MATRIX_COLS 6
+#define VIAL_UNLOCK_COMBO_ROWS { 0, 0 }
+#define VIAL_UNLOCK_COMBO_COLS { 0, 1 }
 
-// wiring of each half
-#define MATRIX_COL_PINS { D4, C6, D7, E6, B4, B5 }
-#define MATRIX_ROW_PINS { F6, F7, B1, B3, B2, B6 }
+#define USE_SERIAL
 
-#define DIODE_DIRECTION COL2ROW
+#define MASTER_LEFT
+//#define MASTER_RIGHT
 
-// WS2812 RGB LED strip input and number of LEDs
-#define RGB_DI_PIN D3
-#define RGBLED_NUM 12
-
-/* define if matrix has ghost */
-//#define MATRIX_HAS_GHOST
-
-/* number of backlight levels */
-// #define BACKLIGHT_LEVELS 3
+//#define EE_HANDS
