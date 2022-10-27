@@ -16,8 +16,13 @@
 
 #pragma once
 
+#define VIAL_KEYBOARD_UID {0x13, 0x99, 0xD3, 0x2D, 0xB7, 0x73, 0x6A, 0xAE}
+
 // place overrides here
 
 #define USE_SERIAL
 // #define MASTER_LEFT
-#define SPLIT_USB_DETECT
+#define EE_HANDS
+
+#define VIAL_UNLOCK_COMBO_ROWS { 0, 0 }
+#define VIAL_UNLOCK_COMBO_COLS { 0, 1 }
