@@ -38,5 +38,3 @@
 /* serial.c configuration (for split keyboard). */
 #define SOFT_SERIAL_PIN D1
 
-/* RGB settings. */
-#define RGB_DI_PIN D3

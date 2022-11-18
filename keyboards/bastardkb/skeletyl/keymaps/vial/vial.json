@@ -2,7 +2,6 @@
     "name": "Skeletyl",
     "vendorId": "0xA8F8",
     "productId": "0x1830",
-    "lighting": "vialrgb",
     "matrix": { "rows": 8, "cols": 5 },
     "layouts": {
         "keymap": [
@@ -153,7 +152,7 @@
                     "y": -2.2,
                     "x": 7.35
                 },
-                "3,0"
+                "3,4"
             ],
             [
                 {
@@ -161,7 +160,7 @@
                     "y": 6,
                     "x": 3.8
                 },
-                "7,0"
+                "7,4"
             ],
             [
                 {

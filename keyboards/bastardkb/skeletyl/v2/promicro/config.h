@@ -1,5 +1,4 @@
-/**
- * Copyright 2020 Nick Brassel (tzarc)
+/*
  * Copyright 2022 Charly Delay <charly@codesink.dev> (@0xcharly)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,10 +17,24 @@
 
 #pragma once
 
-#define HAL_USE_PWM TRUE
-#define HAL_USE_SERIAL TRUE
-#define HAL_USE_SPI TRUE
-#define SPI_USE_WAIT TRUE
-#define SPI_SELECT_MODE SPI_SELECT_MODE_PAD
+/* Key matrix configuration.
+#define MATRIX_ROW_PINS \
+    { F7, C6, D4, B5 }
+#define MATRIX_COL_PINS \
+    { F5, B6, D7, E6, B4 }
+ */
 
-#include_next <halconf.h>
+// wiring of each half
+#define MATRIX_COL_PINS { C6, D7, E6, B4, B5 }
+#define MATRIX_ROW_PINS { B1, B3, B2, B6 }
+
+
+/* Handedness. */
+// #define MASTER_RIGHT
+
+#define USE_SERIAL
+// #define MASTER_LEFT
+#define EE_HANDS
+
+/* serial.c configuration (for split keyboard). */
+#define SOFT_SERIAL_PIN D1
