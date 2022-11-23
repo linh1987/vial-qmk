@@ -28,19 +28,3 @@
 
 /* Set 0 if debouncing isn't needed. */
 #define DEBOUNCE 5
-
-/* RGB settings. */
-#define RGBLED_NUM 58
-#define RGBLED_SPLIT \
-    { 29, 29 }
-
-/* RGB matrix support. */
-#ifdef RGB_MATRIX_ENABLE
-#    define SPLIT_TRANSPORT_MIRROR
-#    define DRIVER_LED_TOTAL RGBLED_NUM
-#    define RGB_MATRIX_SPLIT RGBLED_SPLIT
-#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 50
-#    define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
-#    define RGB_DISABLE_WHEN_USB_SUSPENDED
-#    define RGB_MATRIX_KEYPRESSES
-#endif

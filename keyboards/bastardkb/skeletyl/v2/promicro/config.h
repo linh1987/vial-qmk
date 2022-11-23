@@ -17,13 +17,6 @@
 
 #pragma once
 
-/* Key matrix configuration.
-#define MATRIX_ROW_PINS \
-    { F7, C6, D4, B5 }
-#define MATRIX_COL_PINS \
-    { F5, B6, D7, E6, B4 }
- */
-
 // wiring of each half
 #define MATRIX_COL_PINS { C6, D7, E6, B4, B5 }
 #define MATRIX_ROW_PINS { B1, B3, B2, B6 }
