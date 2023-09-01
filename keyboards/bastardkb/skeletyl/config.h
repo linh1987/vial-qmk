@@ -29,3 +29,24 @@
 /* Set 0 if debouncing isn't needed. */
 #define DEBOUNCE 5
 
+// Enable use of pointing device on slave split.
+#define SPLIT_POINTING_ENABLE
+
+// Pointing device is on the right split.
+#define POINTING_DEVICE_RIGHT
+
+// Invert X axis on mouse reports.
+#define POINTING_DEVICE_INVERT_X
+
+#ifdef POINTING_DEVICE_ENABLE
+// Enable pointer acceleration, which increases the speed by ~2x for large
+// displacement, while maintaining 1x speed for slow movements.  See also:
+// - `CHARYBDIS_POINTER_ACCELERATION_FACTOR`
+#define CHARYBDIS_POINTER_ACCELERATION_ENABLE
+
+// Automatically enable the pointer layer when moving the trackball.  See also:
+// - `CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_TIMEOUT_MS`
+// - `CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD`
+#define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
+#endif  // POINTING_DEVICE_ENABLE
+

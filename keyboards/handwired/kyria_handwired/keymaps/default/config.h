@@ -16,6 +16,8 @@
 
 #pragma once
 
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
+
 #define VIAL_KEYBOARD_UID {0x13, 0x99, 0xD3, 0x2D, 0xB7, 0x73, 0x6A, 0xAE}
 
 // place overrides here

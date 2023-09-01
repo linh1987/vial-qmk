@@ -17,6 +17,9 @@
 
 #include QMK_KEYBOARD_H
 
+//#include "timer.h"
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT_split_3x5_3(
@@ -27,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI, KC_SPC  ,  MO(1),     MO(2), KC_ENT , KC_RALT
+                                          KC_LGUI, DRGSCRL  ,  MO(1),     MO(2), DRGSCRL , KC_RALT
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -86,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,  KC_SPC, _______,     _______, KC_ENT, KC_RALT
+                                          KC_LGUI,  KC_SPC, DRGSCRL,     _______, KC_ENT, KC_RALT
                                       //`--------------------------'  `--------------------------'
   ),
     [6] = LAYOUT_split_3x5_3(
@@ -101,3 +104,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   )
 };
+
+
+// static uint16_t auto_pointer_layer_timer = 0;
+
+// #define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_TIMEOUT_MS 1000
+// #define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD 1
+
+// report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
+//     if (abs(mouse_report.x) > CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD || abs(mouse_report.y) > CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD) {
+//         if (auto_pointer_layer_timer == 0) {
+//             layer_on(5);
+//         }
+//         auto_pointer_layer_timer = timer_read();
+//     }
+//     return mouse_report;
+// }
+
+// void matrix_scan_user(void) {
+//     if (auto_pointer_layer_timer != 0 && TIMER_DIFF_16(timer_read(), auto_pointer_layer_timer) >= CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_TIMEOUT_MS) {
+//         auto_pointer_layer_timer = 0;
+//         layer_off(5);
+//     }
+// }
